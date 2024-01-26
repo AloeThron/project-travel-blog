@@ -116,7 +116,7 @@ export const blogData = [
     publishDate: "September 27, 2023",
   },
   {
-    id: 8,
+    id: 9,
     title: "Travel to the great beyond and never stop!",
     image_path: "/assets/post9.jpg",
     paragraph:
@@ -130,7 +130,7 @@ export const blogData = [
     publishDate: "September 27, 2023",
   },
   {
-    id: 8,
+    id: 10,
     title: "Travel to the great beyond and never stop!",
     image_path: "/assets/post9.jpg",
     paragraph:

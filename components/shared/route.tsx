@@ -1,5 +1,5 @@
 import Link from "next/link";
-import clsx from "clsx";
+import { cn } from "@/lib/utils";
 
 interface routeProps {
   route: string;
@@ -13,7 +13,7 @@ export default function Route({ route, label, isActive, onClick }: routeProps) {
     <Link
       href={route}
       onClick={onClick}
-      className={clsx(isActive && "text-primary")}
+      className={cn(isActive && "text-primary")}
     >
       {label}
     </Link>
