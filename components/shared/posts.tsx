@@ -12,7 +12,7 @@ type Props = {
   posts: PostTypes[];
 };
 
-export default function posts({ posts }: Props) {
+export default function Posts({ posts }: Props) {
   const [visibleBlogs, setVisibleBlogs] = useState(5);
   const [selectedCategory, setSeclectedCategory] = useState("all");
 

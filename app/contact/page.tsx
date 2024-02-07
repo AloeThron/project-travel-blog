@@ -17,7 +17,7 @@ import Map from "@/components/shared/map";
 
 type Props = {};
 
-export default function page({}: Props) {
+export default function Page({}: Props) {
   const form = useForm();
   return (
     <div className="container mx-auto">
@@ -36,7 +36,7 @@ export default function page({}: Props) {
 
       <div className="p-10 leading-8 text-lg mt-10 relative m-auto rouded-lg text-center">
         <h1 className="text-4xl font-extrabold w-full text-center uppercase text-primary mb-10">
-          Let's Contact
+          Contact
         </h1>
 
         <Form {...form}>

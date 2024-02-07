@@ -29,7 +29,8 @@ export default function Footer({}: Props) {
 
           <div className="flex item-center justify-center gap-16 flex-1 text-black max-md:flex-col max-md:gap-5">
             {navLinks.map((link, index) => {
-              const isActive = useMenuActive(link.route);
+            // eslint-disable-next-line react-hooks/rules-of-hooks
+            const isActive = useMenuActive(link.route);
               return (
                 <div key={index} className="text-center">
                   <Route

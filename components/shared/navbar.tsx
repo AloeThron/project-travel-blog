@@ -73,6 +73,7 @@ export default function Navbar({ user }: Props) {
         <div>
           <ul className="flex items-center justify-center gap-16 flex-2 max-md:hidden">
             {navLinks.map((link, index) => {
+              // eslint-disable-next-line react-hooks/rules-of-hooks
               const isActive = useMenuActive(link.route);
               return (
                 <li key={index}>

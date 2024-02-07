@@ -10,7 +10,7 @@ type Props = {
   posts: PostTypes[];
 };
 
-export default function latestPost({ posts }: Props) {
+export default function LatestPost({ posts }: Props) {
   const latestPost = posts.sort(
     (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
   );

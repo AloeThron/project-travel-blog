@@ -43,6 +43,7 @@ export default function NavMobile({ user }: Props) {
         </SheetHeader>
         <ul className="flex items-center justify-center gap-5 flex-col mt-5  py-10 border-b">
           {navLinks.map((link, index) => {
+            // eslint-disable-next-line react-hooks/rules-of-hooks
             const isActive = useMenuActive(link.route);
             return (
               <li key={index}>

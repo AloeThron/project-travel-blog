@@ -11,7 +11,7 @@ type Props = {
   posts: PostTypes[];
 };
 
-export default function topPost({ posts }: Props) {
+export default function TopPost({ posts }: Props) {
   const topPost = posts.filter((post) => post.topPost === true);
 
   return (
@@ -27,8 +27,8 @@ export default function topPost({ posts }: Props) {
 
       <div className="flex h-full flex-col gap-12 items-center">
         {topPost.map((post, index) => (
-          <Link href={`/blog/${post.id}`}>
-            <article key={index}>
+          <article key={index}>
+            <Link href={`/blog/${post.id}`}>
               <div className="relative cursor-pointer">
                 {post.img && (
                   <Image
@@ -54,8 +54,8 @@ export default function topPost({ posts }: Props) {
                   {formatDate(post.createdAt.toString())}
                 </span>
               </div>
-            </article>
-          </Link>
+            </Link>
+          </article>
         ))}
       </div>
     </section>
