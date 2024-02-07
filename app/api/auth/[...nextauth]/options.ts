@@ -5,7 +5,7 @@ import { PrismaAdapter } from "@auth/prisma-adapter";
 import { db } from "@/lib/database";
 
 const authOptions: AuthOptions = {
-  adapter: PrismaAdapter({ ...db, ...{ adapter: "prisma" } }),
+  // adapter: PrismaAdapter({ ...db, ...{ adapter: "prisma" } }),
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID as string,
