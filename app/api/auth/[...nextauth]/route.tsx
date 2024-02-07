@@ -16,6 +16,6 @@ const authOptions: AuthOptions = ({
   session: { strategy: "jwt" },
 })
 
-export const handler = NextAuth(authOptions);
+const handler = NextAuth(authOptions);
 
 export { handler as GET, handler as POST, authOptions };
