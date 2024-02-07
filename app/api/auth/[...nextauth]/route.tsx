@@ -4,8 +4,8 @@ import { PrismaAdapter } from "@auth/prisma-adapter";
 
 import { db } from "@/lib/database";
 
-export const authOptions: AuthOptions = {
-  // adapter: PrismaAdapter({ ...db, ...{ adapter: "prisma" } }),
+const authOptions: AuthOptions = ({
+  adapter: PrismaAdapter({ ...db, ...{ adapter: "prisma" } }),
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID as string,
@@ -14,8 +14,8 @@ export const authOptions: AuthOptions = {
   ],
   secret: process.env.NEXTAUTH_SECRET,
   session: { strategy: "jwt" },
-};
+})
 
-const handler = NextAuth(authOptions);
+export const handler = NextAuth(authOptions);
 
-export { handler as GET, handler as POST };
+export { handler as GET, handler as POST, authOptions };
