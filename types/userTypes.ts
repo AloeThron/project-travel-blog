@@ -1,12 +1,12 @@
 import { StringValidation } from "zod";
 
 export type userTypes = {
-  id: StringValidation;
+  id: String | null;
   name: string | null;
   email: string | null;
   emailVerified: Date | string | null;
   image: string | null;
-  password: String;
+  password: String | null;
 } | null;
 
 // export type userTypes = {
