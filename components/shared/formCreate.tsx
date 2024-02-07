@@ -32,7 +32,7 @@ type Props = {
 
 export default function CreateForm({ user }: Props) {
   const form = useForm();
-  const [file, setFile] = useState<File>();
+  const [file, setFile] = useState<File | undefined>();
   const { edgestore } = useEdgeStore();
   const [imagePath, setImagePath] = useState("");
 
@@ -63,14 +63,14 @@ export default function CreateForm({ user }: Props) {
           </h2>
         ) : (
           <>
-            <SingleImageDropzone
+            {/* <SingleImageDropzone
               onChange={(file) => {
                 setFile(file);
               }}
               width={200}
               height={200}
               value={file}
-            />
+            /> */}
 
             <Form {...form}>
               <form

@@ -14,3 +14,7 @@ export const formatDate = (dateTime: string) => {
 
   return `${date}-${month}-${year}`;
 };
+
+export function convertFileToUrl(file: File) {
+  return URL.createObjectURL(file);
+}
