@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "build": {
+    "env": {
+      "PRISMA_TELEMETRY_INFORMATION": "true"
+    },
+    "commands": {
+      "build": "prisma generate && npm run build"
+    }
+  }
+}
