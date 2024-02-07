@@ -10,7 +10,7 @@ import { userTypes } from "@/types/userTypes";
 import { createPost } from "@/app/actions/blog";
 
 const CreateForm = ({ user }: { user: userTypes }) => {
-  const [file, setFile] = useState<File>();
+  const [file, setFile] = useState<File | undefined>();
   const { edgestore } = useEdgeStore();
   const [imagePath, setImagePath] = useState("");
 
@@ -42,8 +42,8 @@ const CreateForm = ({ user }: { user: userTypes }) => {
         ) : (
           <>
             <SingleImageDropzone
-              onChange={(file) => {
-                setFile(file);
+              onChange={(selectedFile: File | undefined) => {
+                setFile(selectedFile);
               }}
               width={200}
               height={200}
