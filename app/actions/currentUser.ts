@@ -1,10 +1,10 @@
-import { authOptions } from "../api/auth/[...nextauth]/route";
+import { Options } from "../api/auth/[...nextauth]/route";
 import { getServerSession } from "next-auth";
 
 import { db } from "@/lib/database";
 
 export async function getSession() {
-  return await getServerSession(authOptions);
+  return await getServerSession(Options);
 }
 
 export default async function getCurrentUser() {
