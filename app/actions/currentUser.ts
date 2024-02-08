@@ -1,4 +1,4 @@
-import { Options } from "../api/auth/[...nextauth]/route";
+import { Options } from "../api/auth/[...nextauth]/option";
 import { getServerSession } from "next-auth";
 
 import { db } from "@/lib/database";
