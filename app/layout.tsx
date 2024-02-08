@@ -25,6 +25,7 @@ type Props = {
 
 export default async function RootLayout({ children }: Props) {
   const user = await getCurrentUser();
+
   return (
     <html lang="en">
       <AuthContext>

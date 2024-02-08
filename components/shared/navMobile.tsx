@@ -71,8 +71,8 @@ export default function NavMobile({ user }: Props) {
           </div>
         ) : (
           <div className="flex gap-5 flex-1 flex-col py-10">
-            <Button onClick={() => router.push("/access")}>Log In</Button>
-            <Button onClick={() => router.push("/access")}>Sign Up</Button>
+            <Button onClick={() => router.push("/auth/login")}>Log In</Button>
+            <Button onClick={() => router.push("/auth/login")}>Sign Up</Button>
           </div>
         )}
       </SheetContent>

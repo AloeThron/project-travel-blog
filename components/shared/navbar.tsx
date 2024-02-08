@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { User } from "@prisma/client";
-import { signOut } from "next-auth/react";
+import { signIn, signOut } from "next-auth/react";
 
 import {
   DropdownMenu,
@@ -91,8 +91,10 @@ export default function Navbar({ user }: Props) {
         <div>
           {!user && (
             <div className="flex gap-5 flex-1 justify-end max-md:hidden">
-              <Button onClick={() => router.push("/access")}>Log In</Button>
-              <Button onClick={() => router.push("/access")}>Sign Up</Button>
+              <Button onClick={() => router.push("/auth/login")}>Log In</Button>
+              <Button onClick={() => router.push("/auth/login")}>
+                Sign Up
+              </Button>
             </div>
           )}
           <DropdownMenu>

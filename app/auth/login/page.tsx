@@ -7,14 +7,14 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { GoogleLoginButton } from "react-social-login-buttons";
-import { Button } from "@/components/ui/button";
 
-type Props = {};
 
-export default function Access({}: Props) {
+export default function Access() {
   const session = useSession();
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
+
+  console.log("session1: ", session);
 
   useEffect(() => {
     if (session?.status === "authenticated") {
@@ -26,7 +26,7 @@ export default function Access({}: Props) {
   const loginAction = (action: string) => {
     setIsLoading(true);
 
-    signIn(action, { redirect: false })
+    signIn(action)
       .then((callback) => {
         if (callback?.error) {
           return;
